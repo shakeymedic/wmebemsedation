@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMEBEM: Sedation in the UK Emergency Department</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-grey background */
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden; /* To contain tables */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .header-gradient {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6); /* WMEBEM Blue gradient */
+        }
+        .icon-bubble {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: auto; /* Make tables scrollable on small screens */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid #e5e7eb; /* gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* gray-50 */
+            font-weight: 600;
+            color: #374151; /* gray-700 */
+        }
+        tbody tr:last-child td {
+            border-bottom: 0;
+        }
+        .pill {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 0.75rem;
+        }
+        .pill-red {
+            background-color: #fee2e2; /* red-100 */
+            color: #b91c1c; /* red-700 */
+        }
+        .pill-blue {
+            background-color: #dbeafe; /* blue-100 */
+            color: #1d4ed8; /* blue-700 */
+        }
+        .pill-green {
+            background-color: #d1fae5; /* green-100 */
+            color: #065f46; /* green-700 */
+        }
+        .pill-orange {
+            background-color: #ffedd5; /* orange-100 */
+            color: #c2410c; /* orange-700 */
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <img src="https://iili.io/KGQOvkl.md.png" alt="WMEBEM Logo" class="mx-auto h-20 w-auto mb-4">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">A Guide to Sedation in the UK Emergency Department</h1>
+            <p class="text-lg text-gray-600 mt-2">An Infographic Summary of Best Practice for Emergency Physicians</p>
+        </header>
+
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+
+            <!-- Patient Selection & Assessment -->
+            <div class="card p-6 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-user-list mr-3 text-blue-700"></i>Patient Selection & Assessment</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Column 1: Selection -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Patient Selection</h3>
+                        <p class="font-medium text-green-700">Indications:</p>
+                        <p class="text-gray-700 mb-3">Any diagnostic or therapeutic procedure causing significant pain or anxiety where stillness is required.</p>
+                        
+                        <p class="font-medium text-red-700">Absolute Contraindications:</p>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 mb-3">
+                            <li>Lack of trained staff or resuscitation facilities.</li>
+                            <li>Known severe allergy to agents.</li>
+                        </ul>
+
+                        <p class="font-medium text-orange-700">Relative Contraindications (Senior Review):</p>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li>High ASA Status (ASA III+).</li>
+                            <li>Predicted difficult airway.</li>
+                            <li>Active respiratory compromise (e.g., wheeze).</li>
+                            <li>Severe comorbidities (e.g., pulmonary hypertension).</li>
+                        </ul>
+                    </div>
+                    <!-- Column 2: Assessment -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Pre-Sedation Assessment</h3>
+                        <p class="text-gray-700 mb-3">A systematic, documented assessment is the cornerstone of safe practice.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start"><i class="ph-bold ph-clipboard-text text-xl mr-2 text-blue-600"></i><strong>History:</strong> Previous anaesthetic issues, comorbidities (esp. OSA), medications, allergies, alcohol/substance use.</li>
+                            <li class="flex items-start"><i class="ph-bold ph-heartbeat text-xl mr-2 text-blue-600"></i><strong>ASA Status:</strong> Most ED sedation is for ASA I (Healthy) or ASA II (Mild systemic disease). ASA III+ requires senior involvement.</li>
+                            <li class="flex items-start"><i class="ph-bold ph-person text-xl mr-2 text-blue-600"></i><strong>Airway Exam:</strong> The critical question: "Can I bag-mask ventilate this patient?"
+                                <ul class="list-disc list-inside ml-6 mt-1 text-sm">
+                                    <li>External features (obesity, beard, trauma).</li>
+                                    <li><strong>3-3-2 Rule:</strong> Mouth opening (>3), Hyoid-mental (>3), Hyoid-thyroid (>2).</li>
+                                    <li><strong>Mallampati Score:</strong> Class III/IV suggests difficulty.</li>
+                                    <li>Neck mobility.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Fasting Guidance -->
+                <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <h4 class="font-bold text-blue-800 flex items-center"><i class="ph-bold ph-info mr-2"></i>RCEM Fasting Guidance</h4>
+                    <p class="text-blue-700 mt-1"><strong>Do not delay procedural sedation in adults or children in the ED based on fasting time.</strong> Evidence has not shown that fasting reduces emesis or aspiration risk in ED procedural sedation (especially minimal/moderate).</p>
+                </div>
+            </div>
+
+            <!-- Grading Sedation -->
+            <div class="card p-6 lg:col-span-1">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-barricade mr-3 text-blue-700"></i>Grading Sedation Depth</h2>
+                <p class="text-gray-600 mb-4">Sedation is a continuum. The goal for most ED procedures is <strong class="text-gray-900">Moderate Sedation</strong> to maintain a safety buffer.</p>
+                <ul class="space-y-3">
+                    <li><strong class="text-green-700">1. Minimal Sedation (Anxiolysis):</strong> Responds normally to verbal commands. Airway/ventilation unaffected.</li>
+                    <li><strong class="text-blue-700">2. Moderate Sedation ('Conscious'):</strong> Purposeful response to verbal/tactile stimuli. <strong class="text-blue-800">Airway intact, ventilation adequate.</strong></li>
+                    <li><strong class="text-orange-700">3. Deep Sedation:</strong> Responds purposefully to repeated/painful stimuli. <strong class="text-orange-800">Airway may be impaired, ventilation may be inadequate.</strong></li>
+                    <li><strong class="text-red-700">4. General Anaesthesia:</strong> Unarousable. <strong class="text-red-800">Airway intervention often required, ventilation frequently inadequate.</strong></li>
+                </ul>
+            </div>
+
+            <!-- Rescue Imperative -->
+            <div class="card p-6 header-gradient text-white flex flex-col justify-center items-center text-center lg:col-span-2">
+                <i class="ph-bold ph-lifebuoy text-6xl mb-3"></i>
+                <h2 class="text-2xl font-bold mb-2">The "Rescue" Imperative</h2>
+                <p class="text-lg">You MUST be able to "rescue" a patient from one level deeper than intended.
+                <br><br>
+                This means any clinician giving moderate sedation <strong class="font-extrabold">must be competent</strong> in managing deep sedation, including advanced airway manoeuvres and effective bag-valve-mask ventilation.</p>
+            </div>
+            
+            <!-- RCOA/ASA Levels Table -->
+            <div class="card lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 p-6 flex items-center"><i class="ph-bold ph-table mr-3 text-blue-700"></i>RCOA/ASA Levels of Sedation</h2>
+                <div class="table-container">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Characteristic</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Minimal</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Moderate</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Deep</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">General Anaesthesia</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200 text-sm text-gray-700">
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Responsiveness</td>
+                                <td class="px-6 py-4">Normal response to verbal</td>
+                                <td class="px-6 py-4">Purposeful response to verbal/tactile</td>
+                                <td class="px-6 py-4">Purposeful response to repeated/painful</td>
+                                <td class="px-6 py-4">Unarousable</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Airway</td>
+                                <td class="px-6 py-4">Unaffected</td>
+                                <td class="px-6 py-4 font-semibold text-blue-700">No intervention required</td>
+                                <td class="px-6 py-4 text-orange-700">Intervention may be required</td>
+                                <td class="px-6 py-4 font-semibold text-red-700">Intervention often required</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Spontaneous Ventilation</td>
+                                <td class="px-6 py-4">Unaffected</td>
+                                <td class="px-6 py-4 font-semibold text-blue-700">Adequate</td>
+                                <td class="px-6 py-4 text-orange-700">May be inadequate</td>
+                                <td class="px-6 py-4 font-semibold text-red-700">Frequently inadequate</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Cardiovascular Function</td>
+                                <td class="px-6 py-4">Unaffected</td>
+                                <td class="px-6 py-4">Usually maintained</td>
+                                <td class="px-6 py-4">Usually maintained</td>
+                                <td class="px-6 py-4">May be impaired</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Pharmacology Table -->
+            <div class="card lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 p-6 flex items-center"><i class="ph-bold ph-pill mr-3 text-blue-700"></i>Drugs of Sedation: Quick Reference</h2>
+                <div class="table-container">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Drug</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Initial IV Dose (Healthy Adult)</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Initial IV Dose (Elderly/Frail)</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Onset/Duration</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Key Adverse Effects</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reversal</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200 text-sm text-gray-700">
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Propofol</td>
+                                <td class="px-6 py-4">0.5 - 1.0 mg/kg</td>
+                                <td class="px-6 py-4 font-semibold text-orange-700">10-20 mg (slowly)</td>
+                                <td class="px-6 py-4">< 1 min / 3-10 mins</td>
+                                <td class="px-6 py-4 font-semibold text-red-700">Hypotension, Apnoea, Resp. Depression, Injection Pain</td>
+                                <td class="px-6 py-4">N/A</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Midazolam</td>
+                                <td class="px-6 py-4">1 - 2.5 mg (slowly)</td>
+                                <td class="px-6 py-4 font-semibold text-orange-700">0.5 - 1.0 mg</td>
+                                <td class="px-6 py-4">1-2 mins / 60-120 mins</td>
+                                <td class="px-6 py-4 text-red-700">Resp. Depression (esp. with opioids), Hypotension</td>
+                                <td class="px-6 py-4">Flumazenil</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Ketamine</td>
+                                <td class="px-6 py-4">0.5 - 1.0 mg/kg (over 60s)</td>
+                                <td class="px-6 py-4 font-semibold text-orange-700">10-30 mg</td>
+                                <td class="px-6 py-4">< 1 min / 10-15 mins</td>
+                                <td class="px-6 py-4 text-orange-700">Hypertension, Tachycardia, Laryngospasm, Emergence Reaction</td>
+                                <td class="px-6 py-4">N/A</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Fentanyl</td>
+                                <td class="px-6 py-4">0.5 - 1.0 mcg/kg</td>
+                                <td class="px-6 py-4 font-semibold text-orange-700">Smaller doses</td>
+                                <td class="px-6 py-4">1-2 mins / 30-60 mins</td>
+                                <td class="px-6 py-4 text-red-700">Resp. Depression, Chest Wall Rigidity (rapid push)</td>
+                                <td class="px-6 py-4">Naloxone</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-6 bg-gray-50 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">'Ketofol' (1:1 combination)</h4>
+                        <p class="text-sm text-gray-600">Balances side effects: Ketamine supports BP, Propofol reduces emergence. Dose 0.5-0.75 mg/kg of each.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Reversal Agents</h4>
+                        <p class="text-sm text-gray-600"><strong class="text-red-700">Caution:</strong> Re-sedation risk as reversal agent half-life may be shorter than drug. Requires min. 2 hours post-reversal monitoring.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performing Sedation -->
+            <div class="card p-6 lg:col-span-2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-list-checks mr-3 text-blue-700"></i>Performing Safe Sedation: The Workflow</h2>
+                <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                    <li>
+                        <strong>Preparation (SAFE Approach)</strong>
+                        <ul class="list-disc list-inside ml-6 mt-1 text-sm space-y-1">
+                            <li><strong>Staffing:</strong> Minimum 3: Sedationist, Proceduralist, dedicated Monitor/Scribe.</li>
+                            <li><strong>Area:</strong> Resuscitation bay with 360° patient access.</li>
+                            <li><strong>Facilities:</strong> Oxygen, functional suction, airway trolley, monitor, defib.</li>
+                            <li><strong>Equipment:</strong> Emergency drugs (inc. reversal agents) ready.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Team Brief & Checklist</strong>
+                        <ul class="list-disc list-inside ml-6 mt-1 text-sm space-y-1">
+                            <li>Formal "Time Out" using a checklist is mandatory.</li>
+                            <li>Confirm patient, procedure, consent, roles, and airway plan.</li>
+                            <li>Discuss "What if?" rescue strategy (e.g., apnoea plan).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Essential Monitoring</strong>
+                        <ul class="list-disc list-inside ml-6 mt-1 text-sm space-y-1">
+                            <li>Pulse Oximetry, NIBP (q3-5m), 3-lead ECG.</li>
+                            <li class="font-bold text-blue-700">Waveform Capnography (ETCO₂): Now standard of care. Provides the earliest warning of hypoventilation/apnoea, long before SpO₂ drops.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Mock Sedation (Ankle Reduction)</strong>
+                        <ul class="list-disc list-inside ml-6 mt-1 text-sm space-y-1">
+                            <li>ASA I patient, reassuring airway. Consent obtained.</li>
+                            <li>Team brief in resus bay. Fentanyl + Propofol plan. Apnoea plan verbalised.</li>
+                            <li>Full monitoring applied, including capnography. Pre-oxygenate.</li>
+                            <li>Give Fentanyl 50mcg. Wait 3 mins.</li>
+                            <li>Titrate Propofol 20mg boluses, observing ETCO₂ and patient response.</li>
+                            <li>Once at moderate sedation (drowsy, slurring, but responds), proceduralist begins.</li>
+                            <li>Sedationist focuses 100% on patient and monitors.</li>
+                            <li>Procedure ends, monitoring continues until baseline LOC.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Aftercare -->
+            <div class="card p-6 lg:col-span-1">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-bed mr-3 text-blue-700"></i>Aftercare & Discharge</h2>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Recovery Phase</h3>
+                <p class="text-gray-700 mb-3">Monitor in resus-capable area for min. 30 mins post-last dose. Beware of deepening sedation as painful stimulus is removed.</p>
+                
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Criteria-Led Discharge</h3>
+                <p class="text-gray-700 mb-3">Patient must meet all criteria:</p>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li>Returned to baseline Level of Consciousness.</li>
+                    <li>Stable vital signs.</li>
+                    <li>SpO₂ >94% on room air.</li>
+                    <li>Pain/nausea controlled.</li>
+                    <li>Tolerating oral fluids.</li>
+                    <li>Mobilising safely to baseline.</li>
+                </ul>
+
+                <!-- 24 Hour Rules -->
+                <div class="mt-6 bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
+                    <h4 class="font-bold text-red-800 flex items-center"><i class="ph-bold ph-warning mr-2"></i>Mandatory 24-Hour Rules</h4>
+                    <p class="text-red-700 mt-1">Patient MUST be discharged with a responsible adult. They MUST receive written advice to NOT do the following for 24 hours:</p>
+                    <ul class="list-disc list-inside ml-4 mt-2 font-medium text-red-700">
+                        <li>Drive or operate machinery.</li>
+                        <li>Consume alcohol.</li>
+                        <li>Make important/legal decisions.</li>
+                        <li>Care for dependants alone.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Capacity & Consent -->
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-scales mr-3 text-blue-700"></i>Capacity & Consent</h2>
+                <p class="text-gray-700 mb-3">For elective PSA, valid informed consent is mandatory.</p>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Mental Capacity Act (2005)</h3>
+                <p class="text-gray-700 mb-3">Applies to patients 16+. Key principles:</p>
+                <ol class="list-decimal list-inside space-y-1 text-gray-700">
+                    <li>Presume capacity unless proven otherwise.</li>
+                    <li>Must support patient to make a decision.</li>
+                    <li>Patient has the right to make an unwise decision.</li>
+                    <li>Any action taken must be in their <strong>Best Interests</strong>.</li>
+                    <li>Must use the <strong>Least Restrictive Option</strong>.</li>
+                </ol>
+                <h3 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Rapid Tranquilisation (RT)</h3>
+                <p class="text-gray-700">Legal justification (if patient lacks capacity) is based on the MCA and common law (doctrine of necessity) to prevent harm. Treatment must be in their <strong>best interests</strong> and the <strong>least restrictive</strong> option (i.e., de-escalation must have failed).</p>
+            </div>
+
+            <!-- Human Factors -->
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-users-three mr-3 text-blue-700"></i>Human Factors</h2>
+                <p class="text-gray-700 mb-3">Safety is systemic. Non-technical skills are as vital as technical ones.</p>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Crew Resource Management (CRM)</h3>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li><strong>Clear Communication:</strong> Use SBAR.</li>
+                    <li><strong>Leadership & Followership:</strong> Create a flat hierarchy where any team member (inc. nurse) feels empowered to speak up.</li>
+                    <li><strong>Situational Awareness:</strong> Avoid fixation error (e.g., focusing on the procedure and ignoring the monitor).</li>
+                    <li><strong>Workload Distribution:</strong> Dedicated roles prevent cognitive overload.</li>
+                </ul>
+                <p class="text-gray-700 mt-3"><strong>Checklists</strong> and <strong>Simulation</strong> are key tools to improve team dynamics and manage crises.</p>
+            </div>
+
+            <!-- Rapid Tranquilisation -->
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-shield-warning mr-3 text-blue-700"></i>Rapid Tranquilisation</h2>
+                <p class="text-gray-700 mb-3">A last-resort intervention for acute behavioural disturbance with immediate risk to self or others.</p>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li><strong>Exclude Reversible Causes:</strong> Hypoxia, hypoglycaemia, head injury, sepsis.</li>
+                    <li><strong>De-escalation First:</strong> Must be attempted and failed (unless risk is immediate).</li>
+                    <li><strong>Monitoring (NICE QS154):</strong> Min. every 15 mins for 1st hour, then hourly. Includes vitals, LOC (AVPU), and side effects (e.g., EPSEs).</li>
+                </ul>
+            </div>
+
+            <!-- RT Drugs Table -->
+            <div class="card lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 p-6 flex items-center"><i class="ph-bold ph-syringe mr-3 text-blue-700"></i>NICE Rapid Tranquilisation (RT) Drug Regimens (IM)</h2>
+                <div class="table-container">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Line / Indication</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Drug(s)</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Typical IM Dose (Adult)</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Key Cautions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200 text-sm text-gray-700">
+                            <tr>
+                                <td class="px-6 py-4 font-medium">First Line (General Agitation)</td>
+                                <td class="px-6 py-4 font-semibold">Lorazepam</td>
+                                <td class="px-6 py-4">1-2 mg</td>
+                                <td class="px-6 py-4">May repeat after 1 hour. Potent respiratory depressant.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Second Line (Psychotic Agitation)</td>
+                                <td class="px-6 py-4 font-semibold">Haloperidol + Promethazine</td>
+                                <td class="px-6 py-4">Haloperidol 5-10 mg + Promethazine 25-50 mg</td>
+                                <td class="px-6 py-4 font-semibold text-red-700">Risk of QTc prolongation & EPSEs with Haloperidol. Avoid in cardiovascular disease.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium">Alternative (Psychotic Agitation)</td>
+                                <td class="px-6 py-4 font-semibold">Olanzapine</td>
+                                <td class="px-6 py-4">5-10 mg</td>
+                                <td class="px-6 py-4">Effective for psychotic agitation.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Complications Table -->
+            <div class="card lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 p-6 flex items-center"><i class="ph-bold ph-warning-octagon mr-3 text-red-700"></i>Complication Management Algorithms</h2>
+                <div class="table-container">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-red-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-red-900 uppercase tracking-wider">Complication</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-red-900 uppercase tracking-wider">Recognition</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-red-900 uppercase tracking-wider">Immediate Management Steps</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200 text-sm text-gray-700">
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-red-700">Respiratory Depression / Apnoea</td>
+                                <td class="px-6 py-4">Reduced RR, absent/flat ETCO₂ waveform. <strong class="text-red-700">Late sign: ↓SpO₂.</strong></td>
+                                <td class="px-6 py-4">
+                                    <ol class="list-decimal list-inside space-y-1">
+                                        <li><strong>STOP</strong> sedative.</li>
+                                        <li>Stimulate patient (verbal/tactile).</li>
+                                        <li>Perform basic airway manoeuvres (jaw thrust).</li>
+                                        <li>Assist ventilation with <strong>BVM + 100% O₂</strong>.</li>
+                                        <li>Consider reversal agent (Naloxone/Flumazenil).</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-red-700">Laryngospasm</td>
+                                <td class="px-6 py-4">Inspiratory stridor ("crowing"), paradoxical chest movement, no air entry.</td>
+                                <td class="px-6 py-4">
+                                    <ol class="list-decimal list-inside space-y-1">
+                                        <li><strong>STOP</strong> procedure, <strong>Call for Help</strong> (Anaesthetics).</li>
+                                        <li>Apply <strong>100% O₂ with CPAP</strong> via tight-fitting mask.</li>
+                                        <li>Apply forceful <strong>jaw thrust</strong> & pressure at <strong>Larson's Point</strong>.</li>
+                                        <li>Deepen sedation with <strong>Propofol (0.25-0.5 mg/kg IV)</strong>.</li>
+                                        <li>If hypoxic, give <strong>Suxamethonium (1-2 mg/kg IV)</strong> & prepare to intubate.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-orange-700">Hypotension</td>
+                                <td class="px-6 py-4">Significant drop in BP from baseline (common with Propofol).</td>
+                                <td class="px-6 py-4">
+                                    <ol class="list-decimal list-inside space-y-1">
+                                        <li><strong>STOP</strong> sedative (esp. Propofol).</li>
+                                        <li>Administer rapid <strong>IV fluid bolus (250-500 ml)</strong>.</li>
+                                        <li>Consider passive leg raise.</li>
+                                        <li>If unresponsive, give vasopressor (e.g., Metaraminol 0.5mg IV).</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-orange-700">Ketamine Emergence Reaction</td>
+                                <td class="px-6 py-4">Agitation, confusion, hallucinations, vivid dreams during recovery.</td>
+                                <td class="px-6 py-4">
+                                    <ol class="list-decimal list-inside space-y-1">
+                                        <li>Move to a <strong>quiet, low-stimulus</strong> environment.</li>
+                                        <li>Provide calm, verbal reassurance.</li>
+                                        <li>For severe agitation, give <strong>Midazolam 1-2 mg IV</strong>.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="text-center mt-12 pt-8 border-t border-gray-300">
+            <p class="text-sm text-gray-500">
+                Designed by Dr Jake Turner for WMEBEM.
+            </p>
+            <p class="text-sm text-gray-500 mt-4">
+                <strong>Disclaimer:</strong> This infographic is an educational summary intended for revision and teaching purposes only. It is not a substitute for local trust guidelines, clinical judgement, or reading the original reports.
+            </p>
+            <p class="text-xs text-gray-400 mt-4">
+                © 2025 WMEBEM. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="underline hover:text-blue-600" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. You are free to share and adapt this material for non-commercial educational use, provided you give appropriate credit.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
