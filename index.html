@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WMEBEM: Sedation in the UK Emergency Department</title>
+    <title>WMEBEM: Sedation & ABD in the UK Emergency Department</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -85,15 +85,20 @@
         <header class="text-center mb-12">
             <img src="https://iili.io/KGQOvkl.md.png" alt="WMEBEM Logo" class="mx-auto h-20 w-auto mb-4">
             <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">A Guide to Sedation in the UK Emergency Department</h1>
-            <p class="text-lg text-gray-600 mt-2">An Infographic Summary of Best Practice for Emergency Physicians</p>
+            <p class="text-lg text-gray-600 mt-2">Infographic Summary of RCEM Best Practice: Procedural Sedation (2022) & Acute Behavioural Disturbance (2022)</p>
         </header>
 
         <!-- Main Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
 
+            <!-- Title for Part 1 -->
+            <div class="lg:col-span-3 -mb-2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 border-b-2 border-blue-700 pb-2">Part 1: Procedural Sedation (RCEM 2022)</h2>
+            </div>
+
             <!-- Patient Selection & Assessment -->
             <div class="card p-6 lg:col-span-3">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-user-list mr-3 text-blue-700"></i>Patient Selection & Assessment</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-user-list mr-3 text-blue-700"></i>Patient Selection & Assessment (Procedural Sedation)</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Column 1: Selection -->
                     <div>
@@ -135,7 +140,7 @@
                 </div>
                 <!-- Fasting Guidance -->
                 <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                    <h4 class="font-bold text-blue-800 flex items-center"><i class="ph-bold ph-info mr-2"></i>RCEM Fasting Guidance</h4>
+                    <h4 class="font-bold text-blue-800 flex items-center"><i class="ph-bold ph-info mr-2"></i>RCEM Fasting Guidance (Procedural Sedation)</h4>
                     <p class="text-blue-700 mt-1"><strong>Do not delay procedural sedation in adults or children in the ED based on fasting time.</strong> Evidence has not shown that fasting reduces emesis or aspiration risk in ED procedural sedation (especially minimal/moderate).</p>
                 </div>
             </div>
@@ -211,7 +216,7 @@
 
             <!-- Pharmacology Table -->
             <div class="card lg:col-span-3">
-                <h2 class="text-2xl font-bold text-gray-900 p-6 flex items-center"><i class="ph-bold ph-pill mr-3 text-blue-700"></i>Drugs of Sedation: Quick Reference</h2>
+                <h2 class="text-2xl font-bold text-gray-900 p-6 flex items-center"><i class="ph-bold ph-pill mr-3 text-blue-700"></i>Drugs of Procedural Sedation: Quick Reference (RCEM 2022, Appendix 10)</h2>
                 <div class="table-container">
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
@@ -235,7 +240,7 @@
                             </tr>
                             <tr>
                                 <td class="px-6 py-4 font-medium">Midazolam</td>
-                                <td class="px-6 py-4">1 - 2.5 mg (slowly)</td>
+                                <td class="px-6 py-4">1 - 2.0 mg (slowly)</td>
                                 <td class="px-6 py-4 font-semibold text-orange-700">0.5 - 1.0 mg</td>
                                 <td class="px-6 py-4">1-2 mins / 60-120 mins</td>
                                 <td class="px-6 py-4 text-red-700">Resp. Depression (esp. with opioids), Hypotension</td>
@@ -243,7 +248,7 @@
                             </tr>
                             <tr>
                                 <td class="px-6 py-4 font-medium">Ketamine</td>
-                                <td class="px-6 py-4">0.5 - 1.0 mg/kg (over 60s)</td>
+                                <td class="px-6 py-4">1.0 mg/kg (over 30-60s)</td>
                                 <td class="px-6 py-4 font-semibold text-orange-700">10-30 mg</td>
                                 <td class="px-6 py-4">< 1 min / 10-15 mins</td>
                                 <td class="px-6 py-4 text-orange-700">Hypertension, Tachycardia, Laryngospasm, Emergence Reaction</td>
@@ -274,30 +279,33 @@
 
             <!-- Performing Sedation -->
             <div class="card p-6 lg:col-span-2">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-list-checks mr-3 text-blue-700"></i>Performing Safe Sedation: The Workflow</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-list-checks mr-3 text-blue-700"></i>Performing Safe Procedural Sedation: The Workflow</h2>
                 <ol class="list-decimal list-inside space-y-4 text-gray-700">
                     <li>
                         <strong>Preparation (SAFE Approach)</strong>
                         <ul class="list-disc list-inside ml-6 mt-1 text-sm space-y-1">
+                            <li><strong>Analgesia:</strong> Address pain *before* sedation (RCEM Rec 8). Do not use sedation to treat pain.</li>
                             <li><strong>Staffing:</strong> Minimum 3: Sedationist, Proceduralist, dedicated Monitor/Scribe.</li>
                             <li><strong>Area:</strong> Resuscitation bay with 360° patient access.</li>
-                            <li><strong>Facilities:</strong> Oxygen, functional suction, airway trolley, monitor, defib.</li>
+                            <li><strong>Facilities:</strong> Oxygen, functional suction, airway trolley (inc. difficult airway), monitor, defib.</li>
                             <li><strong>Equipment:</strong> Emergency drugs (inc. reversal agents) ready.</li>
                         </ul>
                     </li>
                     <li>
-                        <strong>Team Brief & Checklist</strong>
+                        <strong>Team Brief & Checklist (RCEM Rec 9)</strong>
                         <ul class="list-disc list-inside ml-6 mt-1 text-sm space-y-1">
-                            <li>Formal "Time Out" using a checklist is mandatory.</li>
+                            <li>Formal "Time Out" / Safety Brief using a checklist is mandatory.</li>
                             <li>Confirm patient, procedure, consent, roles, and airway plan.</li>
-                            <li>Discuss "What if?" rescue strategy (e.g., apnoea plan).</li>
+                            <li>Confirm equipment checks (e.g., suction).</li>
+                            <li>Discuss "What if?" rescue strategy (e.g., apnoea, hypotension).</li>
                         </ul>
                     </li>
                     <li>
-                        <strong>Essential Monitoring</strong>
+                        <strong>Essential Monitoring (RCEM Rec 11)</strong>
                         <ul class="list-disc list-inside ml-6 mt-1 text-sm space-y-1">
                             <li>Pulse Oximetry, NIBP (q3-5m), 3-lead ECG.</li>
-                            <li class="font-bold text-blue-700">Waveform Capnography (ETCO₂): Now standard of care. Provides the earliest warning of hypoventilation/apnoea, long before SpO₂ drops.</li>
+                            <li class="font-bold text-blue-700">Continuous Waveform Capnography (ETCO₂): Now standard of care. Provides the earliest warning of hypoventilation/apnoea.</li>
+                            <li>Supplemental O₂ encouraged, especially for at-risk groups (RCEM Rec 10).</li>
                         </ul>
                     </li>
                     <li>
@@ -306,7 +314,7 @@
                             <li>ASA I patient, reassuring airway. Consent obtained.</li>
                             <li>Team brief in resus bay. Fentanyl + Propofol plan. Apnoea plan verbalised.</li>
                             <li>Full monitoring applied, including capnography. Pre-oxygenate.</li>
-                            <li>Give Fentanyl 50mcg. Wait 3 mins.</li>
+                            <li>Give Fentanyl 50mcg for analgesia. Wait 3 mins.</li>
                             <li>Titrate Propofol 20mg boluses, observing ETCO₂ and patient response.</li>
                             <li>Once at moderate sedation (drowsy, slurring, but responds), proceduralist begins.</li>
                             <li>Sedationist focuses 100% on patient and monitors.</li>
@@ -318,19 +326,20 @@
 
             <!-- Aftercare -->
             <div class="card p-6 lg:col-span-1">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-bed mr-3 text-blue-700"></i>Aftercare & Discharge</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-bed mr-3 text-blue-700"></i>Aftercare & Discharge (Procedural Sedation)</h2>
                 <h3 class="text-lg font-semibold text-gray-800 mb-2">Recovery Phase</h3>
-                <p class="text-gray-700 mb-3">Monitor in resus-capable area for min. 30 mins post-last dose. Beware of deepening sedation as painful stimulus is removed.</p>
+                <p class="text-gray-700 mb-3">Monitor in resus-capable area until patient has regained consciousness. Beware of deepening sedation as painful stimulus is removed.</p>
                 
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Criteria-Led Discharge</h3>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">RCEM Minimum Discharge Criteria (Box 3)</h3>
                 <p class="text-gray-700 mb-3">Patient must meet all criteria:</p>
                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                    <li>Returned to baseline Level of Consciousness.</li>
-                    <li>Stable vital signs.</li>
-                    <li>SpO₂ >94% on room air.</li>
-                    <li>Pain/nausea controlled.</li>
-                    <li>Tolerating oral fluids.</li>
-                    <li>Mobilising safely to baseline.</li>
+                    <li>Vital signs returned to baseline.</li>
+                    <li>Alert & Orientated to baseline.</li>
+                    <li>Able to tolerate oral fluids.</li>
+                    <li>Adequate analgesia.</li>
+                    <li>No / minimal nausea.</li>
+                    <li class="font-bold text-orange-700">Minimum 2 hours elapsed since use of reversal agent.</li>
+                    <li class="font-bold text-orange-700">Appropriate care available at home.</li>
                 </ul>
 
                 <!-- 24 Hour Rules -->
@@ -348,9 +357,7 @@
 
             <!-- Capacity & Consent -->
             <div class="card p-6">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-scales mr-3 text-blue-700"></i>Capacity & Consent</h2>
-                <p class="text-gray-700 mb-3">For elective PSA, valid informed consent is mandatory.</p>
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Mental Capacity Act (2005)</h3>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-scales mr-3 text-blue-700"></i>Capacity & Consent (MCA 2005)</h2>
                 <p class="text-gray-700 mb-3">Applies to patients 16+. Key principles:</p>
                 <ol class="list-decimal list-inside space-y-1 text-gray-700">
                     <li>Presume capacity unless proven otherwise.</li>
@@ -359,70 +366,125 @@
                     <li>Any action taken must be in their <strong>Best Interests</strong>.</li>
                     <li>Must use the <strong>Least Restrictive Option</strong>.</li>
                 </ol>
-                <h3 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Rapid Tranquilisation (RT)</h3>
-                <p class="text-gray-700">Legal justification (if patient lacks capacity) is based on the MCA and common law (doctrine of necessity) to prevent harm. Treatment must be in their <strong>best interests</strong> and the <strong>least restrictive</strong> option (i.e., de-escalation must have failed).</p>
+                <p class="text-gray-700 mt-3">For PSA, this means informed consent. For ABD, it provides the legal framework (Best Interests, Least Restrictive) to act if capacity is lost.</p>
             </div>
 
-            <!-- Human Factors -->
+            <!-- Governance & Human Factors -->
             <div class="card p-6">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-users-three mr-3 text-blue-700"></i>Human Factors</h2>
-                <p class="text-gray-700 mb-3">Safety is systemic. Non-technical skills are as vital as technical ones.</p>
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Crew Resource Management (CRM)</h3>
-                <ul class="list-disc list-inside space-y-1 text-gray-700">
-                    <li><strong>Clear Communication:</strong> Use SBAR.</li>
-                    <li><strong>Leadership & Followership:</strong> Create a flat hierarchy where any team member (inc. nurse) feels empowered to speak up.</li>
-                    <li><strong>Situational Awareness:</strong> Avoid fixation error (e.g., focusing on the procedure and ignoring the monitor).</li>
-                    <li><strong>Workload Distribution:</strong> Dedicated roles prevent cognitive overload.</li>
-                </ul>
-                <p class="text-gray-700 mt-3"><strong>Checklists</strong> and <strong>Simulation</strong> are key tools to improve team dynamics and manage crises.</p>
-            </div>
-
-            <!-- Rapid Tranquilisation -->
-            <div class="card p-6">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-shield-warning mr-3 text-blue-700"></i>Rapid Tranquilisation</h2>
-                <p class="text-gray-700 mb-3">A last-resort intervention for acute behavioural disturbance with immediate risk to self or others.</p>
-                <ul class="list-disc list-inside space-y-1 text-gray-700">
-                    <li><strong>Exclude Reversible Causes:</strong> Hypoxia, hypoglycaemia, head injury, sepsis.</li>
-                    <li><strong>De-escalation First:</strong> Must be attempted and failed (unless risk is immediate).</li>
-                    <li><strong>Monitoring (NICE QS154):</strong> Min. every 15 mins for 1st hour, then hourly. Includes vitals, LOC (AVPU), and side effects (e.g., EPSEs).</li>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-users-three mr-3 text-blue-700"></i>Governance & Human Factors</h2>
+                <p class="text-gray-700 mb-3">RCEM (2022) places strong emphasis on governance:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>Sedation Lead:</strong> Every ED must have a designated Sedation Lead (Rec 1).</li>
+                    <li><strong>Sedation Proforma:</strong> Use of a checklist/proforma is strongly recommended (Rec 3).</li>
+                    <li><strong>Adverse Event Reporting:</strong> Use a system like TROOPS for reporting, audit, and rapid review of significant events (Rec 4).</li>
+                    <li><strong>Simulation Training:</strong> Should be used to promote safe practice and competency (Rec 6).</li>
+                    <li><strong>CRM Principles:</strong> Use a flat hierarchy ("followership") and clear communication (SBAR) to prevent fixation error.</li>
                 </ul>
             </div>
 
-            <!-- RT Drugs Table -->
+            <!-- Special Considerations -->
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-user-plus mr-3 text-blue-700"></i>Special Considerations (RCEM 2022)</h2>
+                
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Older Patients (e.g., >75 years)</h3>
+                 <p class="text-gray-700 mb-3">This group is high-risk for adverse events.</p>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li>Significantly reduce doses (e.g., <strong>halve propofol dose</strong> to 10-20mg boluses).</li>
+                    <li>Use slower rates of administration and less frequent repeat doses.</li>
+                    <li>Anticipate delayed onset of action and a longer recovery time.</li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Pregnant Patients</h3>
+                <p class="text-gray-700 mb-3">Considered high-risk, especially in 2nd/3rd trimester. Requires senior ED clinician involvement.</p>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li>Position patient with <strong>left lateral tilt</strong> to avoid aortocaval compression.</li>
+                    <li>Provide <strong>supplemental oxygen</strong>.</li>
+                    <li>Consider pre-procedure antacid (e.g., omeprazole, sodium citrate).</li>
+                </ul>
+            </div>
+
+            <!-- Title for Part 2 -->
+            <div class="lg:col-span-3 -mb-2 mt-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 border-b-2 border-blue-700 pb-2">Part 2: Acute Behavioural Disturbance (RCEM 2022)</h2>
+            </div>
+
+            <!-- Acute Behavioural Disturbance (ABD) -->
+            <div class="card p-6 lg:col-span-3">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i class="ph-bold ph-shield-warning mr-3 text-blue-700"></i>Acute Behavioural Disturbance (ABD) Principles</h2>
+                <p class="text-gray-700 mb-4">This is a separate clinical emergency from procedural sedation. RCEM (2022) frames ABD as a <strong class="text-red-700">medical emergency</strong>, not a diagnosis, with high mortality. The goal is rapid control to ensure safety and allow medical assessment.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Management Principles</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li><strong>De-escalation First:</strong> Verbal and environmental de-escalation must be attempted and failed (unless risk is immediate).</li>
+                            <li><strong>Exclude Reversible Causes:</strong> Actively search for and treat hypoxia, hypoglycaemia, head injury, sepsis, substances, etc.</li>
+                            <li><strong>Medical Emergency:</strong> Treat with the same urgency as other resus-room presentations.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Post-Sedation Monitoring</h3>
+                         <p class="text-gray-700 mb-3">After rapid sedation, high-viglance monitoring is mandatory.</p>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li><strong>Frequency:</strong> Minimum every 15 minutes for the 1st hour, then hourly (or more frequently) until stable.</li>
+                            <li><strong>Monitoring:</strong> Vitals (HR, BP, RR, Temp), O₂ Sats, and Level of Consciousness (e.g., AVPU).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RCEM RT Drugs Table -->
             <div class="card lg:col-span-3">
-                <h2 class="text-2xl font-bold text-gray-900 p-6 flex items-center"><i class="ph-bold ph-syringe mr-3 text-blue-700"></i>NICE Rapid Tranquilisation (RT) Drug Regimens (IM)</h2>
+                <h2 class="text-2xl font-bold text-gray-900 p-6 flex items-center"><i class="ph-bold ph-syringe mr-3 text-blue-700"></i>RCEM Rapid Sedation for Acute Behavioural Disturbance (IM)</h2>
                 <div class="table-container">
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Line / Indication</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Drug(s)</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Agent (IM)</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Typical IM Dose (Adult)</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Key Cautions</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Key Cautions & Notes</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200 text-sm text-gray-700">
                             <tr>
-                                <td class="px-6 py-4 font-medium">First Line (General Agitation)</td>
-                                <td class="px-6 py-4 font-semibold">Lorazepam</td>
-                                <td class="px-6 py-4">1-2 mg</td>
-                                <td class="px-6 py-4">May repeat after 1 hour. Potent respiratory depressant.</td>
+                                <td class="px-6 py-4 font-medium"><span class="pill pill-blue">Ketamine</span><br><span class="text-xs text-gray-500">RCEM Recommended Agent (2022)</span></td>
+                                <td class="px-6 py-4 font-semibold">2-4 mg/kg</td>
+                                <td class="px-6 py-4">
+                                    <strong class="text-green-700">Pros:</strong> Rapid onset, preserves airway reflexes, respiratory drive.
+                                    <br><strong class="text-orange-700">Cons:</strong> Sympathomimetic (↑HR, ↑BP), emergence reaction (manage with benzo). Resus equipment must be ready.
+                                </td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 font-medium">Second Line (Psychotic Agitation)</td>
-                                <td class="px-6 py-4 font-semibold">Haloperidol + Promethazine</td>
-                                <td class="px-6 py-4">Haloperidol 5-10 mg + Promethazine 25-50 mg</td>
-                                <td class="px-6 py-4 font-semibold text-red-700">Risk of QTc prolongation & EPSEs with Haloperidol. Avoid in cardiovascular disease.</td>
+                                <td class="px-6 py-4 font-medium"><span class="pill pill-blue">Droperidol</span><br><span class="text-xs text-gray-500">RCEM Recommended Agent (2022)</span></td>
+                                <td class="px-6 py-4 font-semibold">5-10 mg</td>
+                                <td class="px-6 py-4">
+                                    <strong class="text-green-700">Pros:</strong> Effective sedative/antipsychotic.
+                                    <br><strong class="text-red-700">Cons:</strong> Risk of QTc prolongation (requires ECG monitoring), Extrapyramidal Side Effects (EPSEs).
+                                </td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 font-medium">Alternative (Psychotic Agitation)</td>
-                                <td class="px-6 py-4 font-semibold">Olanzapine</td>
-                                <td class="px-6 py-4">5-10 mg</td>
-                                <td class="px-6 py-4">Effective for psychotic agitation.</td>
+                                <td class="px-6 py-4 font-medium"><span class="pill pill-orange">Lorazepam</span><br><span class="text-xs text-gray-500">Common Benzodiazepine Option</span></td>
+                                <td class="px-6 py-4 font-semibold">1-2 mg</td>
+                                <td class="px-6 py-4">
+                                    <strong class="text-green-700">Pros:</strong> Good anxiolytic/sedative.
+                                    <br><strong class="text-red-700">Cons:</strong> Slower onset than ketamine, potent respiratory depression (esp. with alcohol/opioids).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium"><span class="pill pill-orange">Haloperidol + Promethazine</span><br><span class="text-xs text-gray-500">Common Alternative (BAP/NICE)</span></td>
+                                <td class="px-6 py-4 font-semibold">5-10 mg + 25-50 mg</td>
+                                <td class="px-6 py-4">
+                                    <strong class="text-green-700">Pros:</strong> Effective combination.
+                                    <br><strong class="text-red-700">Cons:</strong> QTc prolongation & EPSEs (from Haloperidol), anticholinergic/sedation (from Promethazine).
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+            </div>
+
+            <!-- Title for Part 3 -->
+            <div class="lg:col-span-3 -mb-2 mt-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 border-b-2 border-red-700 pb-2">Part 3: Complication Management (For ALL Sedation)</h2>
             </div>
 
             <!-- Complications Table -->
@@ -500,7 +562,10 @@
                 Designed by Dr Jake Turner for WMEBEM.
             </p>
             <p class="text-sm text-gray-500 mt-4">
-                <strong>Disclaimer:</strong> This infographic is an educational summary intended for revision and teaching purposes only. It is not a substitute for local trust guidelines, clinical judgement, or reading the original reports.
+                <strong>Disclaimer:</strong> This infographic is an educational summary intended for revision and teaching purposes only. It is not a substitute for local trust guidelines, clinical judgement, or reading the original RCEM guidelines.
+            </p>
+            <p class="text-xs text-gray-400 mt-2">
+                Based on the <strong>RCEM Best Practice Guideline: Procedural Sedation in the Emergency Department (August 2022)</strong> and the <strong>RCEM Best Practice Guideline: Acute Behavioural Disturbance in Emergency Departments (February 2022)</strong>.
             </p>
             <p class="text-xs text-gray-400 mt-4">
                 © 2025 WMEBEM. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="underline hover:text-blue-600" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. You are free to share and adapt this material for non-commercial educational use, provided you give appropriate credit.
